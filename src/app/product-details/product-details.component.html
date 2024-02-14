@@ -1,11 +1,14 @@
 <h1>{{ title }}</h1>
 
+<button (click)="enableBuying()">Enable/Disable Buy</button>
+
 <div *ngFor="let product of products">
   <h2>{{ product.name }}</h2>
   <h2>{{ product.price }}</h2>
   <h2>{{ product.description }}</h2>
   <app-alert-details
     [product]="product"
+    [isToggled]="isToggled"
     (notify)="onClick(product)"
   ></app-alert-details>
 </div>

@@ -8,6 +8,7 @@ import { Product } from 'src/product';
 })
 export class AlertDetailsComponent {
   @Input() product!: Product;
+  @Input() isToggled!: boolean;
   @Output() notify = new EventEmitter<Product>();
 
   onClickChild() {

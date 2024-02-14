@@ -10,8 +10,13 @@ import { Product } from 'src/product';
 export class ProductDetailsComponent {
   title: string = 'E Commerce App';
   products: Product[] = products;
+  isToggled = true;
 
   onClick(product: Product) {
     window.alert(`${product.name} Couse videos are available`);
+  }
+
+  enableBuying() {
+    this.isToggled = !this.isToggled;
   }
 }

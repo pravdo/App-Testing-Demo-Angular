@@ -1,2 +1,4 @@
 <p *ngIf="product.price < 700">Course is available for discount</p>
-<button (click)="onClickChild()">Check Availability</button>
+<button [disabled]="isToggled" (click)="onClickChild()">
+  Check Availability
+</button>
