@@ -10,4 +10,8 @@ import { Product } from 'src/product';
 export class ProductDetailsComponent {
   title: string = 'E Commerce App';
   products: Product[] = products;
+
+  onClick(product: Product) {
+    window.alert(`${product.name} Couse videos are available`);
+  }
 }

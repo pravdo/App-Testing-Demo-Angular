@@ -4,6 +4,8 @@
   <h2>{{ product.name }}</h2>
   <h2>{{ product.price }}</h2>
   <h2>{{ product.description }}</h2>
-  <p *ngIf="product.price < 700">Course is available for discount</p>
-  <button>Check Availability</button>
+  <app-alert-details
+    [product]="product"
+    (notify)="onClick(product)"
+  ></app-alert-details>
 </div>
