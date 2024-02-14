@@ -1,4 +1,15 @@
 <p *ngIf="product.price < 700">Course is available for discount</p>
-<button [disabled]="isToggled" (click)="onClickChild()">
-  Check Availability
-</button>
+
+<ng-container
+  *ngIf="product.quantity > 0; then templateAvailable; else templateMissing"
+></ng-container>
+
+<ng-template #templateAvailable>
+  <button [disabled]="isToggled" (click)="onClickChild()">
+    Check Availability
+  </button>
+</ng-template>
+
+<ng-template #templateMissing>
+  <p>Product is not available for purchase</p>
+</ng-template>
