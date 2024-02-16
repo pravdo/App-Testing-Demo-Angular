@@ -7,6 +7,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { AlertDetailsComponent } from './alert-details/alert-details.component';
 import { ProductShopComponent } from './product-shop/product-shop.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CartItemsComponent } from './cart-items/cart-items.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     ProductDetailsComponent,
     AlertDetailsComponent,
     ProductShopComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CartItemsComponent
   ],
   imports: [
     BrowserModule,
