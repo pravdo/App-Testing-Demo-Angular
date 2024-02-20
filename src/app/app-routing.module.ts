@@ -5,6 +5,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CartItemsComponent } from './cart-items/cart-items.component';
 import { CheckoutformComponent } from './checkoutform/checkoutform.component';
+import { LibraryDashboardComponent } from './library-dashboard/library-dashboard.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutformComponent,
+  },
+  {
+    path: 'library',
+    component: LibraryDashboardComponent,
   },
 ];
 
