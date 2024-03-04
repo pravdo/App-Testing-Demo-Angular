@@ -7,6 +7,7 @@ import { MockCartService } from './MockCartService';
 describe('CartItemsComponent', () => {
   let component: CartItemsComponent;
   let fixture: ComponentFixture<CartItemsComponent>;
+  let cartService: CartService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,7 +16,7 @@ describe('CartItemsComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(CartItemsComponent);
-    TestBed.inject(CartService);
+    cartService = TestBed.inject(CartService);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,5 +24,11 @@ describe('CartItemsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
     expect(component.sum).toBe(40);
+    component.onKey(cartService.getProducts()[1], 3);
+    fixture.detectChanges();
+    expect(component.sum).toBe(75);
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(el.querySelector('.mint')?.textContent).toBe('83');
   });
 });
